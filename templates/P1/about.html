@@ -1,0 +1,98 @@
+    {% extends 'main.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Sakkal Majalla";
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  float: left;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 20px;
+  text-align: center;
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #d7d2cc, #c95fbb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #d7d2cc, #c95fbb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #2c5e5e;
+      width: 50%;
+
+    font-size: x-large;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+    text-align: center;
+}
+
+.title {
+  color: grey;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+<center>
+<div class="about-section">
+<h2 style="color:#ffffff;">About as</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+          &nbsp
+        <h2>Roaa alsrhid</h2>
+ <img style="width: 5em;" class="logo" src="https://i.postimg.cc/4dLVvZjW/logo.jpg" />
+      <br><br>
+          <p class="title">cooking</p>
+        <p>My hobby is cooking since my childhood.</p>
+          <p>I started my cooking career in 2009</p>
+        <p>4211592@upm.edu.sa</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</center>
+</body>
+</html>
+
+
+
+{% endblock %}

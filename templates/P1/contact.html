@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+{% extends 'main.html' %}
+{% block content %}
+
+<html lang="en">
+
+<head>
+    <style>
+input[type=text], select, textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container {
+  border-radius: 5px;  }
+label{ font-family: "Sakkal Majalla"; font-size: x-large; color: rgb(122, 140, 138); }
+    </style>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="color:#304352 ; font-family: 'Sakkal Majalla'; font-size: xxx-large;">Contact Us</h2>
+
+        <form id="contact-form" name="contact-form" action=" {% url 'contact' %}" method="POST">
+
+            {% csrf_token %}
+            <!-- given Coss site request -->
+
+            <label>Your Name</label>
+            <br>
+            <input type="text" id="name" name="name">
+<br>
+            <label>Your Email</label>
+            <br>
+            <input type="text" id="email" name="email">
+<br>
+            <label>The Subject</label>
+            <br>
+            <input type="text" id="subject" name="subject">
+<br>
+            <label>Your message</label>
+            <br>
+            <textarea type="text" id="message" name="message" rows="2"></textarea>
+<br>
+            <button class="ima" onclick="document.getElementById('contact-form').submit">Send</button>
+        </form>
+    </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}
